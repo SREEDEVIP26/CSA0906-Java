@@ -1,28 +1,28 @@
 import java.io.*;
 import java.util.*;
-class reverse
+class armstrong
 {
 public static void main(String args[])
 {
-int i=0,n,rev=0,dig,original;
+int i=0,n,rev=0,dig,number;
 Scanner s=new Scanner(System.in);
 System.out.println("enter nth number");
 n=s.nextInt();
-original=n;
-while(i<n)
+number=n;
+while(n>0)
 {
 dig=n%10;
-rev=rev*10+dig;
+rev+=Math.pow(dig,3);
 n=n/10;
 }
 System.out.println(rev);
-if(original==rev)
+if(number==rev)
 {
-System.out.println("palindrome");
+System.out.println("arms");
 }
 else
 {
-System.out.println("not a palindrome");
+System.out.println("not");
 }
 }
 }
